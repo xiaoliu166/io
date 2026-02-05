@@ -1,0 +1,113 @@
+.status-indicator {
+  text-align: center;
+}
+
+.led-display {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.led-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.led-light {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.led-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.led-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.status-message {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.status-message p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.status-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.status-item.ok {
+  background: #e8f5e9;
+  border-left: 4px solid #4CAF50;
+}
+
+.status-item.alert {
+  background: #fff3e0;
+  border-left: 4px solid #FF9800;
+  animation: alertPulse 2s ease-in-out infinite;
+}
+
+@keyframes alertPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.status-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.status-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}

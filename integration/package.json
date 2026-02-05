@@ -1,0 +1,30 @@
+{
+  "name": "plant-care-robot-integration",
+  "version": "1.0.0",
+  "description": "AI智能植物养护机器人集成测试",
+  "main": "integration-test.ts",
+  "scripts": {
+    "test": "ts-node integration-test.ts",
+    "test:verbose": "DEBUG=* ts-node integration-test.ts",
+    "test:e2e": "ts-node e2e-test.ts",
+    "test:performance": "ts-node performance-test.ts",
+    "test:all": "npm test && npm run test:e2e && npm run test:performance"
+  },
+  "keywords": [
+    "integration",
+    "testing",
+    "iot"
+  ],
+  "author": "Plant Care Robot Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "ws": "^8.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "@types/ws": "^8.5.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
