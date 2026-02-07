@@ -225,7 +225,7 @@ describe('传感器管理器属性测试', () => {
               soilHumidity: fc.float({ min: 0, max: 100 }),
               airHumidity: fc.float({ min: 0, max: 100 }),
               temperature: fc.float({ min: -40, max: 80 }),
-              lightIntensity: fc.float({ min: -1000, max: -0.1 }),
+              lightIntensity: fc.float({ min: Math.fround(-1000), max: Math.fround(-0.1) }),
               timestamp: fc.integer({ min: 1000000000000, max: 9999999999999 }),
             })
           ),

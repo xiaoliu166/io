@@ -18,16 +18,15 @@ module.exports = {
     '<rootDir>/mobile-app/src/**/*.(test|spec).(js|ts|tsx)'
   ],
   
-  // 忽略的测试文件
+  // 忽略的测试文件（mobile-app 需在 mobile 目录内用其自身 Jest/TS 配置运行）
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
-    '<rootDir>/mobile-app/android/',
-    '<rootDir>/mobile-app/ios/',
+    '<rootDir>/mobile-app/',
     '<rootDir>/firmware/'
   ],
   
   // 模块路径映射
-  moduleNameMapping: {
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/mobile-app/src/$1',
     '^@shared/(.*)$': '<rootDir>/shared/$1'
   },
