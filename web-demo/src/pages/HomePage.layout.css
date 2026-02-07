@@ -1,0 +1,149 @@
+/* 首页布局（与全局 --page-max 一致） */
+.layout-375 {
+  max-width: var(--page-max);
+  padding-bottom: calc(var(--nav-h) + 24px);
+}
+
+.home-page .page-header.compact {
+  margin-bottom: 0;
+}
+
+.home-page .page-header.compact h1 {
+  font-size: var(--font-lg);
+  padding: 12px 0 8px;
+}
+
+.home-main {
+  padding: 0 16px 16px;
+  gap: 0;
+}
+
+/* 列表项 90px 通栏 */
+.plants-list-v2 {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.plant-row-v2 {
+  height: 90px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.plant-row-v2-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.plant-row-v2-inner:hover {
+  background: #f9f9f9;
+}
+
+.plant-row-v2-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.plant-thumb-v2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.plant-mood-v2 {
+  font-size: 20px;
+  line-height: 1;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.plant-row-v2-middle {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.plant-name-v2 {
+  font-size: var(--font-lg);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.plant-say-v2 {
+  font-size: var(--font-xs);
+  color: var(--color-text-2);
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.plant-row-v2-right {
+  flex-shrink: 0;
+}
+
+.plant-data-v2 {
+  font-size: var(--font-xs);
+  color: var(--color-text-2);
+  white-space: nowrap;
+}
+
+/* 添加按钮 300x50 */
+.home-add-plant-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.home-add-plant-btn {
+  width: 300px;
+  height: 48px;
+  font-size: var(--font-sm);
+}
+
+/* 功能入口区 80px */
+.home-entry-area {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-entry {
+  width: 160px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-primary);
+  background: #fff;
+  color: var(--color-primary);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-entry:hover {
+  background: #4CAF50;
+  color: #fff;
+}

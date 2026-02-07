@@ -1,0 +1,346 @@
+/* 全站页面通用（统一 max-width、padding、字体） */
+.page {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: var(--page-pad);
+  padding-bottom: calc(var(--nav-h) + 24px);
+}
+
+.page-header {
+  margin-bottom: 16px;
+}
+
+.page-header.with-back {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-header h1 {
+  font-size: var(--font-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.plant-name-link {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.plant-name-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+.page-subtitle {
+  color: var(--color-text-2);
+  font-size: var(--font-xs);
+  margin: 4px 0 0;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: var(--font-sm);
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+.page-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.empty-tip {
+  text-align: center;
+  color: var(--color-text-2);
+  font-size: var(--font-sm);
+  margin: 24px 0;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: var(--font-xs);
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #2196F3;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+.chart-collapse {
+  padding: 16px;
+}
+
+.chart-collapse summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--font-sm);
+  color: var(--color-text);
+}
+
+.chart-collapse[open] summary {
+  margin-bottom: 12px;
+}
+
+/* 表单与列表通用 */
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: var(--font-sm);
+  color: var(--color-text-2);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-sm);
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.form-actions .btn {
+  flex: 1;
+}
+
+/* 我的植物列表（原 plants-list 等保留给其他页） */
+.plants-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plant-item {
+  padding: 0;
+  overflow: hidden;
+}
+
+.plant-item-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+}
+
+.plant-item-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--font-sm);
+}
+
+.plant-thumb {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.plant-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.plant-item-name {
+  font-weight: 600;
+  font-size: var(--font-md);
+}
+
+.plant-item-variety,
+.plant-item-status {
+  font-size: var(--font-xs);
+  color: var(--color-text-2);
+}
+
+.plant-arrow {
+  color: var(--color-text-3);
+  font-size: var(--font-md);
+}
+
+/* Profile 等 */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.profile-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #a8e6cf 0%, #88d8b0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.profile-info h2 {
+  margin: 0 0 8px;
+  font-size: var(--font-lg);
+}
+
+.menu-group {
+  margin-bottom: 20px;
+}
+
+.menu-group-title {
+  font-size: var(--font-xs);
+  color: var(--color-text-2);
+  margin: 0 0 8px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.menu-list .menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--font-sm);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-list .menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-list .menu-item:hover {
+  background: rgba(76, 175, 80, 0.06);
+}
+
+.menu-icon {
+  font-size: 20px;
+}
+
+.menu-label {
+  flex: 1;
+}
+
+.menu-desc {
+  font-size: var(--font-xs);
+  color: var(--color-text-3);
+}
+
+.menu-badge {
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.menu-arrow {
+  color: var(--color-text-3);
+}
+
+/* 百科页内共用 */
+.ency-section h2 {
+  font-size: var(--font-md);
+  margin: 0 0 12px;
+  color: var(--color-text);
+}
+
+.ency-category h3 {
+  font-size: var(--font-sm);
+  margin: 0 0 6px;
+  color: var(--color-text);
+}
+
+.ency-category ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--color-text-2);
+  font-size: var(--font-sm);
+  line-height: 1.6;
+}
+
+.tutorial-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--color-text-2);
+  line-height: 1.8;
+  font-size: var(--font-sm);
+}
+
+.faq-item {
+  margin-bottom: 12px;
+}
+
+.faq-item strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: var(--font-sm);
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--color-text-2);
+  font-size: var(--font-sm);
+  line-height: 1.5;
+}
